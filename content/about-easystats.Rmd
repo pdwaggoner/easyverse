@@ -1,0 +1,12 @@
+---
+title: About the Easyverse
+---
+
+The Easyverse is comprised of an ecosystem of R packages designed to make the use of advanced statistical techniques easy. The idea is to not only offer a starting place for interacting with and fitting models, but to support any researcher's full project from start to finish, including fitting, interpreting, diagnosing, and visualizing statistical models.
+
+In addition to benefitting from many contributors, our core team includes (often referred to collectively as "easystats"):
+
+* [Mattan S. Ben-Shachar](https://github.com/mattansb)
+* [Daniel Lüdecke](https://github.com/strengejacke)
+* [Dominique Makowski](https://github.com/DominiqueMakowski)
+* [Philip Waggoner](https://github.com/pdwaggoner)

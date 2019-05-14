@@ -1,0 +1,7 @@
+---
+title: Packages in the Easyverse
+---
+
+`bayestestR`: Describe posterior distributions and Bayesian models [![](/./packages_files/bayes.png){width=30%}](https://easystats.github.io/bayestestR/)
+
+`performance`: Access models' quality and performance metrics [![](/./packages_files/performance.png){width=30%}](https://easystats.github.io/performance/)
