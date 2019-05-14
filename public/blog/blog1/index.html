@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+
+<meta itemprop="name" content="Describe and understand Bayesian models and posteriors using bayestestR">
+<meta itemprop="description" content="The Bayesian framework is quickly gaining popularity among scientists, leading to the growing popularity of packages to fit Bayesian models, such as rstanarm or brms. However, extracting summary indices from these models to report them in your manuscript can be quite challenging, especially for new users.
+To address this, please let us introduce bayestestR!
+bayestestR We have recently decided to collaborate around the new easystats project, a set of packages designed to make your life easier (currently very WIP).">
+
+
+<meta itemprop="datePublished" content="2019-04-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-04-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="309">
+
+
+
+<meta itemprop="keywords" content="R,easystats,bayestestR,posterior,rstanarm,brms," />
+<meta property="og:title" content="Describe and understand Bayesian models and posteriors using bayestestR" />
+<meta property="og:description" content="The Bayesian framework is quickly gaining popularity among scientists, leading to the growing popularity of packages to fit Bayesian models, such as rstanarm or brms. However, extracting summary indices from these models to report them in your manuscript can be quite challenging, especially for new users.
+To address this, please let us introduce bayestestR!
+bayestestR We have recently decided to collaborate around the new easystats project, a set of packages designed to make your life easier (currently very WIP)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/blog1/" />
+<meta property="article:published_time" content="2019-04-15T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-04-15T00:00:00&#43;00:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Describe and understand Bayesian models and posteriors using bayestestR"/>
+<meta name="twitter:description" content="The Bayesian framework is quickly gaining popularity among scientists, leading to the growing popularity of packages to fit Bayesian models, such as rstanarm or brms. However, extracting summary indices from these models to report them in your manuscript can be quite challenging, especially for new users.
+To address this, please let us introduce bayestestR!
+bayestestR We have recently decided to collaborate around the new easystats project, a set of packages designed to make your life easier (currently very WIP)."/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Describe and understand Bayesian models and posteriors using bayestestR</title>
+	<link rel="stylesheet" href="/css/style.min.31706917653d2b9e8410abd431f30ec4359a88a94fc87a63654779d87329edec.css" integrity="sha256-MXBpF2U9K56EEKvUMfMOxDWaiKlPyHpjZUd52HMp7ew=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="/">The Easyverse</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					<a href="/packages/">Packages</a>
+					<a href="/blog/">Blog</a>
+					<a href="/contribute/">Contribute</a>
+					<a href="/about-easystats/">About</a>
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/easystats" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="/packages/">Packages</a></li>
+			<li><a href="/blog/">Blog</a></li>
+			<li><a href="/contribute/">Contribute</a></li>
+			<li><a href="/about-easystats/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>Describe and understand Bayesian models and posteriors using bayestestR</h1>
+		<div class="content">
+			
+
+
+<p>The <strong>Bayesian framework</strong> is quickly gaining popularity among scientists, leading to the growing popularity of packages to fit Bayesian models, such as <a href="https://github.com/stan-dev/rstanarm"><code>rstanarm</code></a> or <a href="https://github.com/paul-buerkner/brms"><code>brms</code></a>. However, extracting summary indices from these models to report them in your manuscript can be quite challenging, especially for new users.</p>
+<p><strong><em>To address this, please let us introduce</em></strong> <a href="https://github.com/easystats/bayestestR"><strong><code>bayestestR</code></strong></a><strong>!</strong></p>
+<div id="bayestestr" class="section level2">
+<h2>bayestestR</h2>
+<p><a href="https://github.com/orgs/easystats/people">We</a> have recently decided to collaborate around the new <a href="https://github.com/easystats"><strong>easystats</strong></a> <strong>project</strong>, a set of packages designed to make your life <em>easier</em> (currently very WIP). As we are also Bayesian enthusiasts, we decided to focus on the development of a package devoted to Bayesian post-processing.</p>
+<p>The goal of <a href="https://github.com/easystats/bayestestR"><code>bayestestR</code></a> is to provide lightweight tools to help <strong>processing and understanding Bayesian models and posterior distributions</strong>. It includes several functions used to report and characterise them, such as <a href="https://github.com/easystats/bayestestR#highest-density-interval-hdi---the-credible-interval-ci"><strong>Highest Density Interval (<code>hdi</code>)</strong></a>, the <a href="https://github.com/easystats/bayestestR#map-estimate"><strong>highest Maximum A Posteriori (<code>MAP</code>)</strong></a> or functions to find a suitable <a href="https://github.com/easystats/bayestestR#find-ropes-appropriate-range"><strong>ROPE range</strong></a>, compute the <a href="https://github.com/easystats/bayestestR#rope"><strong>ROPE percentage</strong></a> or do an <a href="https://github.com/easystats/bayestestR#equivalence-test"><strong>Equivalence Test</strong></a>. It also includes more exploratory indices, such as the <a href="https://github.com/easystats/bayestestR#probability-of-direction-pd"><strong>Probability of Direction (<code>pd</code>)</strong></a>, a <a href="https://easystats.github.io/bayestestR/articles/guidelines.html">numeric <em>equivalent</em></a> of the frequentist <em>p</em> value.</p>
+<p><code>bayestestR</code> can be installed as follows:</p>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>Let’s check whether the effects of my Bayesian regression can be considered as non-negligible. This can be done via the <a href="https://easystats.github.io/bayestestR/reference/equivalence_test.html#details"><strong>equivalence test</strong></a>.</p>
+<pre class="r"><code># Load the rstanarm package
+library(rstanarm)
+
+# Fit a Bayesian model
+model &lt;- stan_glm(mpg ~ wt + cyl + gear + am + hp, data = mtcars)</code></pre>
+<pre class="r"><code># Do the test
+equivalence_test(model)</code></pre>
+<pre><code>## # Test for Practical Equivalence
+## 
+##   ROPE: [-0.60 0.60]
+## 
+##    Parameter        H0 inside ROPE       95% HDI
+##  (Intercept)  rejected      0.00 % [24.96 49.38]
+##           wt undecided      0.55 % [-4.52 -0.52]
+##          cyl undecided     37.65 % [-2.19  0.61]
+##         gear undecided     40.07 % [-2.61  2.10]
+##           am undecided     17.63 % [-2.12  5.09]
+##           hp  accepted    100.00 % [-0.06  0.01]</code></pre>
+<p><strong>Don’t forget to check out the</strong> <a href="https://github.com/easystats/bayestestR#documentation"><strong>documentation</strong></a> <strong>for more.</strong></p>
+</div>
+
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2019 <a href="/">easystats</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="/js/main.min.784417f5847151f848c339cf0acb13a06cbb648b1483435a28ed4556c4ead69b.js" integrity="sha256-eEQX9YRxUfhIwznPCssToGy7ZIsUg0NaKO1FVsTq1ps="></script>
+
+</body>
+
+</html>

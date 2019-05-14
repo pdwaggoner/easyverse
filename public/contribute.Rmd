@@ -1,0 +1,8 @@
+---
+title: Contribute to the Easyverse
+---
+
+The Easyverse is always open to [contributions](https://github.com/easystats). Interested users can contribute in one of two ways:
+
+1. Offer suggestions for improvement or recommendations for enhancements (or even new packages) via `issues` on [Github](https://github.com/easystats)
+2. Directly interact with us and packages via `pull requests` on [Github](https://github.com/easystats)

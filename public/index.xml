@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Easyverse</title>
+    <link>/</link>
+    <description>Recent content on The Easyverse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 15 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Describe and understand Bayesian models and posteriors using bayestestR</title>
+      <link>/blog/blog1/</link>
+      <pubDate>Mon, 15 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/blog1/</guid>
+      <description>The Bayesian framework is quickly gaining popularity among scientists, leading to the growing popularity of packages to fit Bayesian models, such as rstanarm or brms. However, extracting summary indices from these models to report them in your manuscript can be quite challenging, especially for new users.
+To address this, please let us introduce bayestestR!
+bayestestR We have recently decided to collaborate around the new easystats project, a set of packages designed to make your life easier (currently very WIP).</description>
+    </item>
+    
+    <item>
+      <title>About the Easyverse</title>
+      <link>/about-easystats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about-easystats/</guid>
+      <description>The Easyverse is comprised of an ecosystem of R packages designed to make the use of advanced statistical techniques easy. The idea is to not only offer a starting place for interacting with and fitting models, but to support any researcher’s full project from start to finish, including fitting, interpreting, diagnosing, and visualizing statistical models.
+In addition to benefitting from many contributors, our core team includes (often referred to collectively as “easystats”):</description>
+    </item>
+    
+    <item>
+      <title>Contribute to the Easyverse</title>
+      <link>/contribute/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contribute/</guid>
+      <description> The Easyverse is always open to contributions. Interested users can contribute in one of two ways:
+Offer suggestions for improvement or recommendations for enhancements (or even new packages) via issues on Github Directly interact with us and packages via pull requests on Github  </description>
+    </item>
+    
+    <item>
+      <title>Packages in the Easyverse</title>
+      <link>/packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/packages/</guid>
+      <description>bayestestR: Describe posterior distributions and Bayesian models 
+performance: Access models’ quality and performance metrics</description>
+    </item>
+    
+  </channel>
+</rss>

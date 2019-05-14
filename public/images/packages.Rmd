@@ -1,0 +1,8 @@
+---
+date: "2019-05-14"
+title: Packages
+---
+
+[![bayestestR: Describing posterior distributions and Bayesian models](packages/bayestestR.png)](https://easystats.github.io/bayestestR/)
+
+
